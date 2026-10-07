@@ -14,6 +14,7 @@ import {
 } from 'react-icons/fa6';
 import Image from 'next/image';
 import logoTrabsparent from '@/app/assets/images/dogari-property-logo-transparent.png';
+import Link from 'next/link';
 
 const dpgSocials = [
   { icon: FaXTwitter, title: 'Twitter', href: 'https://twitter.com/...' },
@@ -80,26 +81,18 @@ export default function Footer() {
               Services
             </h4>
             <ul className='space-y-3'>
-              {/* {[
-                { label: 'Property Advisory', page: 'advisory' as Page },
-                { label: 'Investment', page: 'invest' as Page },
-                { label: 'Sales Brokerage', page: 'sales' as Page },
-                { label: 'Leasing Services', page: 'leasing' as Page },
-                {
-                  label: 'Property Services',
-                  page: 'property-services' as Page,
-                },
-                { label: 'Developer Solutions', page: 'invest' as Page },
-              ].map((item) => (
-                <li key={item.label}>
-                  <button
-                    onClick={() => onNavigate(item.page)}
-                    className='text-white/35 text-sm hover:text-white/65 transition-colors text-left font-body'
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))} */}
+              <li className='text-white/35 text-sm hover:text-white/65 transition-colors text-left font-body'>
+                <Link href={`/advisory`}>Property Advisory</Link>
+              </li>
+              <li className='text-white/35 text-sm hover:text-white/65 transition-colors text-left font-body'>
+                <Link href={`/invest`}>Investment</Link>
+              </li>
+              <li className='text-white/35 text-sm hover:text-white/65 transition-colors text-left font-body'>
+                <Link href={`/sales`}>Sales Brokerage</Link>
+              </li>
+              <li className='text-white/35 text-sm hover:text-white/65 transition-colors text-left font-body'>
+                <Link href={`/leasing`}>Leasing Services</Link>
+              </li>
             </ul>
           </div>
 
@@ -109,25 +102,18 @@ export default function Footer() {
               Properties
             </h4>
             <ul className='space-y-3'>
-              {/* {[
-                { label: 'Buy a Property', page: 'properties' as Page },
-                { label: 'Rent a Property', page: 'properties' as Page },
-                { label: 'Commercial', page: 'properties' as Page },
-                { label: 'List Your Property', page: 'list-property' as Page },
-                {
-                  label: 'Shortlet Management',
-                  page: 'property-services' as Page,
-                },
-              ].map((item) => (
-                <li key={item.label}>
-                  <button
-                    onClick={() => onNavigate(item.page)}
-                    className='text-white/35 text-sm hover:text-white/65 transition-colors text-left font-body'
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))} */}
+              <li className='text-white/35 text-sm hover:text-white/65 transition-colors text-left font-body'>
+                <Link href={`/properties`}>Buy a Property</Link>
+              </li>
+              <li className='text-white/35 text-sm hover:text-white/65 transition-colors text-left font-body'>
+                <Link href={`/properties`}>Rent a Property</Link>
+              </li>
+              <li className='text-white/35 text-sm hover:text-white/65 transition-colors text-left font-body'>
+                <Link href={`/properties`}>Commercial</Link>
+              </li>
+              <li className='text-white/35 text-sm hover:text-white/65 transition-colors text-left font-body'>
+                <Link href={`/list-property`}>List Your Property</Link>
+              </li>
             </ul>
           </div>
 
@@ -162,7 +148,7 @@ export default function Footer() {
             <div className='mt-8'>
               <button
                 // onClick={onConsult}
-                className='bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold px-5 py-2.5 text-xs tracking-wide transition-colors rounded-sm font-body'
+                className='bg-gold-500 hover:bg-gold-400 text-[#0B2D4A] font-semibold px-5 py-2.5 text-xs tracking-wide transition-colors rounded-sm font-body'
               >
                 Talk to an Advisor
               </button>
@@ -172,30 +158,18 @@ export default function Footer() {
 
         <div className='pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4'>
           <p className='text-white/18 text-xs font-body'>
-            © 2026 Dogari Property Group Ltd. All rights reserved. RC 1234567.
+            © 2026 Dogari Property Group Ltd. All rights reserved.
           </p>
           <div className='flex gap-6 items-center flex-wrap justify-center md:justify-end'>
-            {/* {[
-              { label: 'Privacy Policy', page: 'privacy' as Page },
-              { label: 'Terms & Conditions', page: 'terms' as Page },
-              { label: 'Cookie Policy', page: 'cookies' as Page },
-            ].map((item) => (
-              <button
-                key={item.label}
-                onClick={() => onNavigate(item.page)}
-                className='text-white/18 text-xs hover:text-white/35 transition-colors font-body'
-              >
-                {item.label}
-              </button>
-            ))} */}
-            {/* {onAdminAccess && (
-              <button
-                onClick={onAdminAccess}
-                className='text-white/8 text-xs hover:text-white/25 transition-colors font-body'
-              >
-                Admin
-              </button>
-            )} */}
+            <li className='text-white/35 text-sm hover:text-white/65 transition-colors text-left font-body'>
+              <Link href={`/privacy`}>Privacy Policy</Link>
+            </li>
+            <li className='text-white/35 text-sm hover:text-white/65 transition-colors text-left font-body'>
+              <Link href={`/terms`}>Terms & Conditions</Link>
+            </li>
+            <li className='text-white/35 text-sm hover:text-white/65 transition-colors text-left font-body'>
+              <Link href={`/cookies`}>Cookie Policy</Link>
+            </li>
           </div>
         </div>
       </div>

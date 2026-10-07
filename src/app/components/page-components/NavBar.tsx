@@ -318,6 +318,7 @@ export default function Nav({
               alt='Dogari Property Group'
               width={150}
               height={100}
+              loading='eager'
             />
           </button>
 
@@ -552,7 +553,7 @@ export default function Nav({
                         }
                         aria-expanded={isExpanded}
                         aria-controls={`mobile-sub-${item.label.toLowerCase()}`}
-                        className={`w-full flex items-center justify-between text-base font-medium py-3 font-body min-h-[44px] transition-colors ${
+                        className={`w-full flex items-center justify-between text-base font-medium py-3 font-body min-h-11 transition-colors ${
                           isActive ? 'text-gold-400' : 'text-white/75'
                         }`}
                       >
@@ -580,7 +581,7 @@ export default function Nav({
                               )}
                               <button
                                 onClick={() => navigate(child.page)}
-                                className={`w-full text-left text-sm py-2.5 pl-3 border-l font-body min-h-[44px] transition-colors ${
+                                className={`w-full text-left text-sm py-2.5 pl-3 border-l font-body min-h-11 transition-colors ${
                                   currentPage === child.page
                                     ? 'text-gold-400 border-gold-500'
                                     : 'text-white/50 hover:text-white border-gold-500/20'
@@ -613,13 +614,13 @@ export default function Nav({
             <li className='flex flex-col gap-3 pt-4 pb-2'>
               <button
                 onClick={() => navigate('list-property')}
-                className='text-sm text-center text-white/70 border border-white/15 rounded-sm py-3 font-body min-h-[44px]'
+                className='text-sm text-center text-white/70 border border-white/15 rounded-sm py-3 font-body min-h-11'
               >
                 List Your Property
               </button>
               <button
                 onClick={() => navigate('talk-to-advisor')}
-                className='text-sm font-semibold text-center bg-gold-500 hover:bg-gold-400 text-[#0B2D4A] rounded-sm py-3 font-body min-h-[44px] transition-colors'
+                className='text-sm font-semibold text-center bg-gold-500 hover:bg-gold-400 text-[#0B2D4A] rounded-sm py-3 font-body min-h-11 transition-colors'
               >
                 Talk to an Advisor
               </button>
