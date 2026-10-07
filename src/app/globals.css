@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -23,4 +23,111 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --color-navy-950: #050d1a;
+  --color-navy-900: #0d1f3c;
+  --color-navy-800: #142240;
+  --color-navy-700: #1c2e5a;
+  --color-navy-600: #243668;
+  --color-navy-500: #2e4280;
+  --color-gold-700: #8b6318;
+  --color-gold-600: #a87820;
+  --color-gold-500: #c9963c;
+  --color-gold-400: #d9ad52;
+  --color-gold-300: #e8c872;
+  --color-gold-200: #f2db9e;
+  --color-gold-100: #f9edd0;
+  --color-gold-50: #fdf7eb;
+  --color-cream: #faf7f2;
+  --color-cream-dark: #f0eae0;
+  --font-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: white;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes ken-burns-1 {
+  0% {
+    transform: scale(1) translate(0%, 0%);
+  }
+  100% {
+    transform: scale(1.1) translate(-1.5%, -1%);
+  }
+}
+@keyframes ken-burns-2 {
+  0% {
+    transform: scale(1.06) translate(1.5%, 0.5%);
+  }
+  100% {
+    transform: scale(1) translate(-1%, 1.5%);
+  }
+}
+@keyframes ken-burns-3 {
+  0% {
+    transform: scale(1) translate(1%, 0.5%);
+  }
+  100% {
+    transform: scale(1.1) translate(-0.5%, -1.5%);
+  }
+}
+@keyframes ken-burns-4 {
+  0% {
+    transform: scale(1.08) translate(-1%, 1%);
+  }
+  100% {
+    transform: scale(1) translate(1.5%, -0.5%);
+  }
+}
+
+.kb-1 {
+  animation: ken-burns-1 9s ease-out forwards;
+}
+.kb-2 {
+  animation: ken-burns-2 9s ease-out forwards;
+}
+.kb-3 {
+  animation: ken-burns-3 9s ease-out forwards;
+}
+.kb-4 {
+  animation: ken-burns-4 9s ease-out forwards;
+}
+
+/* Global focus-visible ring — navy-aware offset */
+:focus-visible {
+  outline: 2px solid var(--color-gold-400);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Suppress focus ring on mouse clicks, keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
 }
