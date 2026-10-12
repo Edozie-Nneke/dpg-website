@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { animationVariants } from '@/helper/motion.helper';
 
 // import { Page } from '../App';
@@ -123,7 +123,7 @@ export default function HomePageHero() {
           >
             Invest Smarter.
             <br />
-            <span className='text-gold-400'>Own Better.</span>
+            <span className='text-[#D4AF57]'>Own Better.</span>
           </motion.h1>
 
           <motion.p
@@ -141,13 +141,13 @@ export default function HomePageHero() {
           >
             <button
               // onClick={onConsult}
-              className='bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold px-8 py-4 text-sm tracking-wide transition-all duration-200 hover:shadow-xl hover:shadow-gold-500/20 rounded-sm font-body'
+              className='bg-[#D4AF57] hover:bg-[#D4AF57]/80 text-navy-900 font-semibold px-8 py-4 text-sm tracking-wide transition-all duration-200 hover:shadow-xl hover:shadow-[#D4AF57]/20 rounded-sm font-body'
             >
               Talk to an Advisor
             </button>
             <button
               // onClick={() => onNavigate('invest')}
-              className='border border-white/25 hover:border-gold-500/50 text-white/80 hover:text-gold-300 px-8 py-4 text-sm tracking-wide transition-all duration-200 rounded-sm font-body'
+              className='border border-white/25 hover:border-[#D4AF57]/50 text-white/80 hover:text-[#D4AF57] px-8 py-4 text-sm tracking-wide transition-all duration-200 rounded-sm font-body'
             >
               Explore Opportunities
             </button>
@@ -161,7 +161,7 @@ export default function HomePageHero() {
               { value: '94%', label: 'Satisfaction Rate' },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className='text-gold-400 font-display text-2xl md:text-3xl'>
+                <div className='text-[#D4AF57] font-display text-2xl md:text-3xl'>
                   {stat.value}
                 </div>
                 <div className='text-white/40 text-xs font-body tracking-wide mt-1'>
