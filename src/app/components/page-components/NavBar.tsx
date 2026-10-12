@@ -13,8 +13,9 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import logoNavy from '@/app/assets/images/dogari-property-logo-navy-0B2D4A.png';
+import logo from '@/app/assets/images/dogari-property-logo-transparent.png';
 import logoTransparent from '@/app/assets/images/dogari-property-logo-transparent.png';
+import Link from 'next/link';
 
 export type Page =
   | 'home'
@@ -308,19 +309,19 @@ export default function Nav({
       >
         <div className='flex items-center justify-between h-20'>
           {/* ── Logo ── */}
-          <button
-            onClick={() => navigate('home')}
+          <Link
+            href={`/`}
             aria-label='Dogari Property Group — go to homepage'
-            className='flex flex-col items-start shrink-0'
+            className='flex items-center shrink-0 h-full'
           >
             <Image
-              src={solid ? logoNavy : logoTransparent}
+              src={logo}
               alt='Dogari Property Group'
-              width={150}
-              height={100}
+              height={70}
+              width={70}
               loading='eager'
             />
-          </button>
+          </Link>
 
           {/* ══ DESKTOP horizontal nav ══════════════════════════════════════ */}
           <ul
@@ -362,7 +363,7 @@ export default function Nav({
                     className={`relative flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium tracking-wide rounded-sm transition-colors font-body
                       ${
                         isActive
-                          ? 'text-gold-400'
+                          ? 'text-[#D4AF57]'
                           : 'text-white/70 hover:text-white hover:bg-white/5'
                       }
                     `}
@@ -381,7 +382,7 @@ export default function Nav({
                     {isActive && (
                       <span
                         aria-hidden='true'
-                        className='absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-gold-400 rounded-full'
+                        className='absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-[#D4AF57] rounded-full'
                       />
                     )}
                   </button>
@@ -402,7 +403,7 @@ export default function Nav({
                     >
                       <div className='bg-[#0B2D4A] border border-white/8 shadow-2xl shadow-[#0B2D4A]/70 overflow-hidden'>
                         <div className='px-4 py-2.5 border-b border-white/6'>
-                          <span className='text-gold-400/60 text-[10px] font-semibold tracking-[0.25em] uppercase font-body'>
+                          <span className='text-[#D4AF57]/60 text-[10px] font-semibold tracking-[0.25em] uppercase font-body'>
                             {item.label}
                           </span>
                         </div>
@@ -436,7 +437,7 @@ export default function Nav({
                                 <span
                                   className={`block text-sm font-medium font-body group-hover:text-white transition-colors leading-tight ${
                                     currentPage === child.page
-                                      ? 'text-gold-400'
+                                      ? 'text-[#D4AF57]'
                                       : 'text-white/85'
                                   }`}
                                 >
@@ -456,7 +457,7 @@ export default function Nav({
                               //   onClick={() =>
                               //     handleFooterCta(item.footerCta!.action)
                               //   }
-                              className='text-xs font-semibold text-gold-500 hover:text-gold-400 transition-colors font-body'
+                              className='text-xs font-semibold text-[#D4AF57] hover:text-[#D4AF57]/80 transition-colors font-body'
                             >
                               {item.footerCta.label} →
                             </button>
@@ -554,7 +555,7 @@ export default function Nav({
                         aria-expanded={isExpanded}
                         aria-controls={`mobile-sub-${item.label.toLowerCase()}`}
                         className={`w-full flex items-center justify-between text-base font-medium py-3 font-body min-h-11 transition-colors ${
-                          isActive ? 'text-gold-400' : 'text-white/75'
+                          isActive ? 'text-[#D4AF57]' : 'text-white/75'
                         }`}
                       >
                         <span>{item.label}</span>
@@ -583,8 +584,8 @@ export default function Nav({
                                 onClick={() => navigate(child.page)}
                                 className={`w-full text-left text-sm py-2.5 pl-3 border-l font-body min-h-11 transition-colors ${
                                   currentPage === child.page
-                                    ? 'text-gold-400 border-gold-500'
-                                    : 'text-white/50 hover:text-white border-gold-500/20'
+                                    ? 'text-[#D4AF57] border-[#D4AF57]'
+                                    : 'text-white/50 hover:text-white border-[#D4AF57]/20'
                                 }`}
                               >
                                 {child.label}
@@ -600,7 +601,7 @@ export default function Nav({
                       aria-current={isActive ? 'page' : undefined}
                       className={`w-full text-left text-base font-medium py-3 border-b border-white/6 font-body min-h-[44px] transition-colors ${
                         isActive
-                          ? 'text-gold-400'
+                          ? 'text-[#D4AF57]'
                           : 'text-white/75 hover:text-white'
                       }`}
                     >
@@ -620,7 +621,7 @@ export default function Nav({
               </button>
               <button
                 onClick={() => navigate('talk-to-advisor')}
-                className='text-sm font-semibold text-center bg-gold-500 hover:bg-gold-400 text-[#0B2D4A] rounded-sm py-3 font-body min-h-11 transition-colors'
+                className='text-sm font-semibold text-center bg-[#D4AF57] hover:bg-[#D4AF57]/80 text-[#0B2D4A] rounded-sm py-3 font-body min-h-11 transition-colors'
               >
                 Talk to an Advisor
               </button>
