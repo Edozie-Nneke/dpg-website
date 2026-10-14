@@ -51,7 +51,7 @@ export default function FeaturedOpportunities() {
     router.push(`/${path}`);
   };
   return (
-    <section className='bg-navy-800 py-24 lg:py-32'>
+    <section className='bg-[#0B2D4A]/80 py-24 lg:py-32'>
       <div className='max-w-7xl mx-auto px-6 lg:px-8'>
         <motion.div
           initial='hidden'
@@ -92,18 +92,18 @@ export default function FeaturedOpportunities() {
             <motion.div
               key={opp.name}
               variants={animationVariants.item}
-              className='group bg-navy-900 hover:bg-navy-950 border border-white/5 hover:border-gold-500/25 transition-all duration-300 overflow-hidden cursor-pointer'
+              className='group bg-[#0B2D4A] hover:bg-[#0B2D4A]/95 border border-white/5 hover:border-gold-500/25 transition-all duration-300 overflow-hidden cursor-pointer'
               onClick={() => onNavigate('invest')}
             >
-              <div className='relative h-56 bg-navy-700 overflow-hidden'>
+              <div className='relative h-56 bg-[#0B2D4A]/70 overflow-hidden'>
                 <img
                   src={opp.image}
                   alt={opp.name}
                   className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-75'
                 />
-                <div className='absolute inset-0 bg-gradient-to-t from-navy-950/85 to-transparent' />
+                <div className='absolute inset-0 bg-gradient-to-t from-[#0B2D4A]/85 to-transparent' />
                 <div className='absolute top-4 left-4 flex items-center gap-2'>
-                  <span className='bg-gold-500 text-navy-900 text-xs font-semibold px-2.5 py-1 uppercase tracking-wide font-body'>
+                  <span className='bg-gold-500 text-[#0B2D4A] text-xs font-semibold px-2.5 py-1 uppercase tracking-wide font-body'>
                     {opp.badge}
                   </span>
                   {opp.status === 'Limited Units' && (
