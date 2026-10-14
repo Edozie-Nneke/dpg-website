@@ -155,7 +155,7 @@ export default function OurCapabilities() {
                 Our Capabilities
               </span>
             </div>
-            <h2 className='font-display text-4xl md:text-5xl text-navy-900 leading-tight'>
+            <h2 className='font-display text-4xl md:text-5xl text-[#0B2D4A] leading-tight'>
               Full-spectrum property
               <br />
               expertise, under one roof.
@@ -163,14 +163,14 @@ export default function OurCapabilities() {
           </motion.div>
           <motion.p
             variants={animationVariants.item}
-            className='text-navy-700/60 text-base max-w-xs leading-relaxed font-body'
+            className='text-[#0B2D4A]/60 text-base max-w-xs leading-relaxed font-body'
           >
             We work with buyers, investors, sellers, and landlords across Lagos,
             Abuja, and beyond.
           </motion.p>
         </motion.div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-navy-900/8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#0B2D4A]/8'>
           {services.map((service) => (
             <Link
               key={service.title}
@@ -181,10 +181,10 @@ export default function OurCapabilities() {
                 {service.icon}
               </div>
               <div className='flex-1'>
-                <h3 className='font-display text-xl text-navy-900 mb-2'>
+                <h3 className='font-display text-xl text-[#0B2D4A] mb-2'>
                   {service.title}
                 </h3>
-                <p className='text-navy-700/55 text-sm leading-relaxed font-body'>
+                <p className='text-[#0B2D4A]/55 text-sm leading-relaxed font-body'>
                   {service.description}
                 </p>
               </div>

@@ -30,7 +30,7 @@ const differentiators = [
 
 export default function WhyDPG() {
   return (
-    <section className='bg-navy-900 py-24 lg:py-32 relative overflow-hidden'>
+    <section className='bg-[#0B2D4A] py-24 lg:py-32 relative overflow-hidden'>
       <div
         className='absolute inset-0 pointer-events-none'
         style={{
@@ -70,7 +70,7 @@ export default function WhyDPG() {
             </motion.p>
             <motion.button
               variants={animationVariants.item}
-              className='bg-[#D4AF57] hover:bg-[#D4AF57]/80 text-navy-900 font-semibold px-8 py-4 text-sm tracking-wide transition-all duration-200 rounded-sm font-body'
+              className='bg-[#D4AF57] hover:bg-[#D4AF57]/80 text-[#0B2D4A] font-semibold px-8 py-4 text-sm tracking-wide transition-all duration-200 rounded-sm font-body'
             >
               Talk to an Advisor
             </motion.button>
